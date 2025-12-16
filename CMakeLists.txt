@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(ImGui C CXX)
+project(imgui C CXX)
 
 add_library(${PROJECT_NAME} STATIC
     imconfig.h
@@ -19,4 +19,9 @@ add_library(${PROJECT_NAME} STATIC
 target_include_directories(${PROJECT_NAME}
 PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_compile_definitions(${PROJECT_NAME}
+PRIVATE
+    _CRT_SECURE_NO_WARNINGS
 )
